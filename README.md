@@ -49,6 +49,8 @@ e.g.
 </template>
 ```
 ### Helpers ###
+
+#### Favorited docs from a colletion####
 `{{Favorites collection}}`
 
 You can easily list a user's favorites with the global helper `{{Favorites 'Posts'}}` for the `Posts` collection, for example.
@@ -73,6 +75,34 @@ You can use it inside of a loop like this:
 		</div>
 	</div>
 	{{/if}}
+</template>
+```
+
+#### Favorite count####
+`{{favoriteCount _id}}`
+
+This will return the number of times the doc has been favorited.
+
+#### Order by favorites ####
+`{{orderByFavorites docs}}` where `docs` is an array of mongo docs.
+
+This will return the docs ordered by the number of times that they have been favorited.
+
+```
+<template name="posts">
+	{{#each orderByFavorites Posts}}
+		<div class="panel panel-default">
+			  <div class="panel-heading">
+					<h3 class="panel-title">{{title}}</h3>
+			  </div>
+			  <div class="panel-body">
+					{{content}}
+			  </div>
+			  <div class="panel-footer">
+			  	{{> favoriteButton _id=_id}}
+			  </div>
+		</div>
+	{{/each}}
 </template>
 ```
 
