@@ -4,9 +4,47 @@ Package.describe({
   git: "http://github.com/yogiben/meteor-favorites.git"
 });
 
+both = ['client','server']
+
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2.2');
-  api.addFiles('yogiben:favorites.js');
+
+  api.use(
+  	[
+  		'iron:router',
+  		'coffeescript',
+  		'less',
+      'templating',
+
+	    'aldeed:collection2@0.4.6'
+
+  	],
+  	both);
+
+  api.addFiles(
+  	[
+  		'lib/both/schemas.coffee',
+  		'lib/both/collections.coffee'
+  	],
+  	both)
+
+   api.addFiles(
+  	[
+  		'lib/client/templates.html',
+      'lib/client/templates.coffee',
+  		'lib/client/helpers.coffee'
+  	],
+  	'client')
+
+   api.addFiles(
+  	[
+  		'lib/server/allow.coffee',
+  		'lib/server/publish.coffee'
+  	],
+  	'server')
+
+
+
 });
 
 Package.onTest(function(api) {
