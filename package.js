@@ -11,7 +11,6 @@ Package.onUse(function(api) {
 
   api.use(
   	[
-  		'iron:router',
   		'coffeescript',
   		'less',
       'templating',

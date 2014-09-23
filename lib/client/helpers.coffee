@@ -6,6 +6,5 @@ Template.registerHelper 'Favorites', (collection) ->
 		collection = window[collection]
 
 		_.each favorites, (favorite)->
-			console.log favorite
 			Favorites.push(collection.findOne({_id:favorite.doc})) if collection.findOne({_id:favorite.doc})
 		Favorites
