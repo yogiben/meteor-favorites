@@ -75,3 +75,27 @@ You can use it inside of a loop like this:
 	{{/if}}
 </template>
 ```
+
+### Customising ###
+You can created your own buttons and replace the default templates. To do this, you should use the separate [template-extension](https://github.com/aldeed/meteor-template-extension) package.
+
+1) Install with `meteor add aldeed:template-extension`
+
+2) Create new button templates based on this markup
+```
+<template name="myFavoriteButtonFavorited">
+	<a class="favorite-button" doc="{{_id}}"><i class="fa fa-thumbs-up"></i> Favorite</a>
+</template>
+
+<template name="myFavoriteButtonNotFavorited">
+	<a class="favorite-button" doc="{{_id}}"><i class="fa fa-thumbs-o-up"></i> Favorite</a>
+</template>
+```
+
+3) Replace the existing button templates with the `replace` method provided by the package
+
+```
+Template.myFavoriteButtonFavorited.replaces("favoriteButtonFavorited")
+
+Template.myFavoriteButtonNotFavorited.replaces("favoriteButtonNotFavorited")
+```
