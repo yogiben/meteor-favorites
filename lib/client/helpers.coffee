@@ -11,3 +11,8 @@ Template.registerHelper 'Favorites', (collection) ->
 Template.registerHelper 'favoriteCount', (_id)->
 	if typeof window['Favorites'] != 'undefined'
 		Favorites.find({doc:_id}).fetch().length
+
+Template.registerHelper 'orderByFavorites', (docs)->
+	if typeof window['Favorites'] != 'undefined' and typeof docs != 'undefined'
+		_.sortBy docs, (doc) ->
+  			-1 * Favorites.find({doc:doc._id}).fetch().length
