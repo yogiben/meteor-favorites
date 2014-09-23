@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Adds favoriting/liking functionality",
-  version: "0.0.1",
+  version: "0.0.2",
   git: "http://github.com/yogiben/meteor-favorites.git"
 });
 
