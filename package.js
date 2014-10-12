@@ -1,6 +1,6 @@
 Package.describe({
-  summary: "Adds favoriting/liking functionality",
-  version: "0.0.2",
+  summary: "Adds favoriting/liking functionality to any collection",
+  version: "0.0.3",
   git: "http://github.com/yogiben/meteor-favorites.git"
 });
 
@@ -15,7 +15,7 @@ Package.onUse(function(api) {
   		'less',
       'templating',
 
-	    'aldeed:collection2@0.4.6'
+	    'aldeed:autoform@3.2.0'
 
   	],
   	both);
