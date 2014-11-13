@@ -1,13 +1,13 @@
 Package.describe({
   summary: "Adds favoriting/liking functionality to any collection",
-  version: "0.0.3",
+  version: "0.0.4",
   git: "http://github.com/yogiben/meteor-favorites.git"
 });
 
 both = ['client','server']
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.2.2');
+  api.versionsFrom('METEOR@1.0');
 
   api.use(
   	[
@@ -15,7 +15,7 @@ Package.onUse(function(api) {
   		'less',
       'templating',
 
-	    'aldeed:autoform@3.2.0'
+	    'aldeed:autoform@4.0.2'
 
   	],
   	both);
