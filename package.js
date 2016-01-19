@@ -14,7 +14,6 @@ Package.onUse(function(api) {
   		'coffeescript',
   		'less@2.5.1',
       'templating',
-
 	    'aldeed:autoform@4.0.2 || 5.1.2'
 
   	],
