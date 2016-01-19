@@ -5,13 +5,13 @@ Template.favoriteButton.helpers
 			owner: Meteor.userId()
 
 Template.favoriteButtonNotFavorited.events
-	'click .favorite-button': (e,t) ->
+	'click .js-favorite-button': (e,t) ->
 		Favorites.insert
 			doc: $(e.currentTarget).attr('doc')
 			owner: Meteor.userId()
 
 Template.favoriteButtonFavorited.events
-	'click .favorite-button': (e,t) ->
+	'click .js-favorite-button': (e,t) ->
 		favorite = Favorites.findOne
 			owner: Meteor.userId()
 			doc: $(e.currentTarget).attr('doc')

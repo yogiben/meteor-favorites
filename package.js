@@ -7,22 +7,20 @@ Package.describe({
 both = ['client','server']
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.0.3');
 
   api.use(
   	[
   		'coffeescript',
-  		'less',
+  		'less@2.5.1',
       'templating',
-
-	    'aldeed:autoform@4.0.2'
+	    'aldeed:autoform@4.0.2 || 5.1.2'
 
   	],
   	both);
 
   api.addFiles(
   	[
-  		'lib/both/schemas.coffee',
   		'lib/both/collections.coffee'
   	],
   	both)
