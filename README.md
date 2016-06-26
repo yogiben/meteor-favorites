@@ -2,7 +2,7 @@ Favouriting made easy
 ================
 This is my fork of yogibens:meteor-favorites. Updated version numbers and changed the button template to simply the "Star" icon.
 
-`meteor add patrickbolle:favorites`
+`meteor add patrickbolle:meteor-favorites`
 
 [See a demo](http://yogiben-favorites.meteor.com/dashboard)
 
