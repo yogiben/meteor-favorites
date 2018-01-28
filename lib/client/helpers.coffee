@@ -16,3 +16,10 @@ Template.registerHelper 'orderByFavorites', (docs)->
 	if typeof window['Favorites'] != 'undefined' and typeof docs != 'undefined'
 		_.sortBy docs, (doc) ->
   			-1 * Favorites.find({doc:doc._id}).fetch().length
+
+Template.registerHelper 'getIcon', (icon)->	
+		if(icon){
+			return icon;
+				}else {
+			return "fa fa-star";
+		}

@@ -3,14 +3,7 @@ Template.favoriteButton.helpers
 		Favorites.findOne
 			doc: _id
 			owner: Meteor.userId()
-	getIcon :(icon)->
-		if(icon){
-			return icon;
-				}else {
-			return "fa fa-star";
-		}
 	
-
 Template.favoriteButtonNotFavorited.events
 	'click .favorite-button': (e,t) ->
 		Favorites.insert
