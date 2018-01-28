@@ -1,8 +1,8 @@
 <template name="favoriteButton">
 	{{#if isFavorite _id}}
-	{{> favoriteButtonFavorited _id=_id}}
+	{{> favoriteButtonFavorited icon=icon _id=_id}}
 	{{else}}
-	{{> favoriteButtonNotFavorited}}
+	{{> favoriteButtonNotFavorited icon=icon}}
 	{{/if}}
 </template>
 
